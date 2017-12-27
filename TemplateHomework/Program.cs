@@ -11,19 +11,17 @@ namespace TemplateHomework
         static void Main(string[] args)
         {
             Console.WriteLine("========================通知信============================");
-            NotifyMail notifyMail = new NotifyMail("通知信","peterji@gmail.com;");
-            notifyMail.MakeMailTitle();
-            notifyMail.MakeMailReceiver();
-            notifyMail.MakeMailBody();
-            notifyMail.Send();
+            AbstractMail notifyMail = new NotifyMail("通知信","alextann@nine-yi.com;");
+            notifyMail.SendProcess();
 
             Console.WriteLine("========================警告信============================");
-            ErrorMail errorMail = new ErrorMail("警告信", "peterji@gmail.com;");
+            AbstractMail errorMail = new ErrorMail("警告信", "alextann@nine-yi.com;");
             errorMail.SendProcess();
 
-            Console.WriteLine("========================警告信============================");
-            ErrorMail errorMail2 = new ErrorMail("警告信", "peterji@gmail.com;", true);
+            Console.WriteLine("========================警告信2============================");
+            AbstractMail errorMail2 = new ErrorMail("警告信2", "alextann@nine-yi.com;", true);
             errorMail2.SendProcess();
+
             Console.ReadLine();
         }
     }

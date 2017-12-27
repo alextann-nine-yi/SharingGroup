@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractMail.cs" />
     <Compile Include="ErrorMail.cs" />
     <Compile Include="NotifyMail.cs" />
     <Compile Include="Program.cs" />
